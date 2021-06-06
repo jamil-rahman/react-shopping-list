@@ -22,13 +22,18 @@ const Items = ({ items, removeItem, updateItem }) => {
       return <ListFrom edit={edit} onSubmit={submitUpdate} />;
     }
   
-    return items.map((item) => (
-        <div className='icons'>
-          <RiCloseCircleLine onClick={() => removeItem(item.id)}/>
+    return items.map((item,index) => (
+        <div className='li-items-container' key={index}>
+          <div className="li-items-left" >
+          {item.text}
+          </div>
+          <div className="li-items-right">
+           <RiCloseCircleLine onClick={() => removeItem(item.id)}/>
           <TiEdit onClick={() => setEdit({ 
                 id: item.id,
                 value: item.text })}
                 />
+          </div>
         </div>
       
     ));
