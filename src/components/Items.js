@@ -23,13 +23,13 @@ const Items = ({ items, removeItem, updateItem }) => {
     }
   
     return items.map((item,index) => (
-        <div className='li-items-container' key={index}>
+        <div className='li-items-container' key={index} style={{backgroundColor: "white"}}>
           <div className="li-items-left" >
           {item.text}
           </div>
           <div className="li-items-right">
            <RiCloseCircleLine onClick={() => removeItem(item.id)}/>
-          <TiEdit onClick={() => setEdit({ 
+            <TiEdit onClick={() => setEdit({ 
                 id: item.id,
                 value: item.text })}
                 />

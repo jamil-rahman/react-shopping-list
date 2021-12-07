@@ -13,7 +13,7 @@ code {
     monospace;
 }
 .list-form{
-  background-color: white;
+  background-color: rgb(241, 245, 248);
 }
 .li-items-container{
   display: flex;
